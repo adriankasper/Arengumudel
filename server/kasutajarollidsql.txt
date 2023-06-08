@@ -1,0 +1,1 @@
+INSERT INTO Kasutajaroll (rolli_nimi) VALUES ("Õpetaja"), ("Juhtkond");

@@ -1,0 +1,118 @@
+/* .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+body {
+  background-color: rgba(231, 231, 231, 0.3);
+}
+
+/* Register page CSS */
+
+@media all and (min-width: 480px) {
+  .register {
+    padding-bottom: 30px;
+    display: inline-block;
+  }
+  .register form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+.register h3 {
+  display: flex;
+  font-size: 1em;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+#register-button {
+  background-color: #459157;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+  
+}
+#register-button:hover{
+  background-color: #32693f;
+  cursor: pointer;
+}
+.reg-page {
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.reg-page label input {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 1em;
+}
+.register span {
+  word-wrap: break-word;
+}
+
+/* Login page CSS */
+
+.login { 
+  display: inline-block;
+  padding: 20px;
+  vertical-align: auto;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 4em;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.page-login {
+  display: inline-block;
+}
+.login-button, #login-id, #login-mobile {
+  background-color: #459157;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  padding: 1rem;
+  border: none;
+  transition: 0.3s;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.login-button:hover {
+  background-color: #32693f;
+  cursor: pointer;
+}
+.login-email-input, .login-password-input {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 6px;
+  font-size: 1em;
+}
+#login-id:hover {
+  background-color: #32693f;
+  cursor: pointer;
+}
+#login-mobile:hover {
+  background-color: #32693f;
+  cursor: pointer;
+}
+.login h3 {
+  display: flex;
+  font-size: 1em;
+  margin-bottom: 0;
+  color: rgb(59, 59, 59);
+  margin-left: 10px;
+}
+.login-button, #login-id, #login-mobile, .page-login label input, #register-button, .reg-page label input{
+  width: 20em;
+  height: 3em;
+  margin: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

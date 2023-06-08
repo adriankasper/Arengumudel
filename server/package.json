@@ -1,0 +1,44 @@
+{
+  "name": "op_prof_mudel_server",
+  "version": "0.0.1",
+  "description": "Opetaja professionaalse arengu mudeli server (Suvepraktika)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaitJ/opetaja-prof-arengu-mudel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaitJ/opetaja-prof-arengu-mudel/issues"
+  },
+  "homepage": "https://github.com/MaitJ/opetaja-prof-arengu-mudel#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-respond": "^1.5.15",
+    "express-validator": "^6.10.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.6.1",
+    "path": "^0.12.7",
+    "sharp": "^0.28.3"
+  },
+  "devDependencies": {
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}
