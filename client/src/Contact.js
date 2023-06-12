@@ -4,14 +4,17 @@ import Profilecard from './Profilecard';
 import { toast } from 'react-toastify';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+
+
 const Contact = () => {
     const [status, setStatus] = useState('Submit');
     const [msgStatus, setMsgStatus] = useState(false);
-    const [contactMessage, setContactMessage] = useState('Something went wrong');
+    const [contactMessage, setContactMessage] = useState('Midagi läks valesti');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [captchaValue, setCaptchaValue] = useState('');
+    const sitekey = "6LfGmI0mAAAAAG2NgQ6DOoYBf71q8lqksfPWqy8n";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -86,7 +89,7 @@ const Contact = () => {
                         <textarea id="message" name="message" rows="6" cols="80"></textarea>
                         <div className="captcha-container">
                             <ReCAPTCHA
-                                sitekey="6LfGmI0mAAAAAG2NgQ6DOoYBf71q8lqksfPWqy8n"
+                                sitekey={sitekey}
                                 onChange={handleCaptchaChange}
                                 hl="et"
                             />
