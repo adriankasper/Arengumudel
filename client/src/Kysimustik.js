@@ -149,7 +149,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
                 }
 
                 summa /= questionBlockStats.length;
-                setFinalResult(summa);
+                setFinalResult(summa.toFixed(2));
                 setQuestionnaireEnd(true);
             }
         })
@@ -182,20 +182,30 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         }
     }
     const ChartComponent = () => {
+        const plokkArray = [];
+        const percentageArray = [];
+        const colorArray = [];
+        let percentage;
+        let word;
+        let color;
+
+        for (let i = 1; i <= questionBlockStats.length; i++) {
+            word = "Plokk " + i;
+            plokkArray.push(word);
+
+            percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
+            percentageArray.push(percentage);
+
+            color = 'rgba(71, 145, 89, 1)';
+            colorArray.push(color);
+        }
         const data = {
-            labels: ['Plokk 1', 'Plokk 2', 'Plokk 3', 'Plokk 4', 'Plokk 5', 'Plokk 6'],
+            labels: plokkArray,
             datasets: [
                 {
                     label: '',
-                    data: [95, 10, 0, 25.5, 6, 50],
-                    backgroundColor: [
-                        'rgba(71, 145, 89, 1)',
-                        'rgba(71, 145, 89, 1)',
-                        'rgba(71, 145, 89, 1)',
-                        'rgba(71, 145, 89, 1)',
-                        'rgba(71, 145, 89, 1)',
-                        'rgba(71, 145, 89, 1)',
-                    ],
+                    data: percentageArray,
+                    backgroundColor: colorArray,
                 },
             ],
         };
@@ -205,8 +215,8 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             scales: {
                 x: {
                     beginAtZero: true,
-                    max: 100, // Set the maximum value to 100
-                    min: 0,   // Set the minimum value to 0
+                    max: 100,
+                    min: 0,
                 },
             },
         };
@@ -222,7 +232,8 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
     if (questionnaireEnd) {
         return (
             <section className="tulemuse_vaheleht-container">
-                <h5>Lõpptulemus: {finalResult}</h5>
+                <h5>Lõpptulemus: {finalResult}%</h5>
+                {ChartComponent()}
             </section>
         );
     }
@@ -236,7 +247,6 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
                 <h2>Ploki tulemus: {roundedPercent} %</h2>
                 <h3>Tagasiside</h3>
                 <p>{currentFeedback}</p>
-                {ChartComponent()}
                 {statPageBtnHandler()}
             </section>
         );
