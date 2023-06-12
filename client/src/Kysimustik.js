@@ -190,7 +190,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         let color;
 
         for (let i = 1; i <= questionBlockStats.length; i++) {
-            word = "Plokk " + i;
+            word = "Plokk " + i + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
             plokkArray.push(word);
 
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
@@ -232,7 +232,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
     if (questionnaireEnd) {
         return (
             <section className="tulemuse_vaheleht-container">
-                <h5>Lõpptulemus: {finalResult}%</h5>
+                <h5>Keskmine lõpptulemus: {finalResult}%</h5>
                 {ChartComponent()}
             </section>
         );
