@@ -3,6 +3,10 @@ import {useState} from 'react';
 import axios from 'axios';
 import Kysimusteplokk from './Kysimusteplokk';
 import { toast } from 'react-toastify';
+import { Bar } from 'react-chartjs-2';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
+
 
 require('dotenv').config()
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
@@ -37,7 +41,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         })
         .catch((error) => {
             console.log(error);
-        })
+        }) gssgsgsgs
         */
 
         axios.post(kysimused_url, {kysimusteplokk_id: selectedPlokk, kysimustik_id: kysimustik_id})
@@ -54,7 +58,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
 
     useEffect(() => {
         axios.post(kysimused_url, {kysimusteplokk_id: selectedPlokk, kysimustik_id: kysimustik_id})
-        .then((response) => {
+            .then((response) => {
             let praegunePlokk = [];
             for (let i = 0; i < response.data.length; ++i) {praegunePlokk = [...praegunePlokk, response.data[i].kysimus_id];}
             setKysimusteIdArr(praegunePlokk);
@@ -168,6 +172,53 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         }
     };
 
+
+
+    const plokkideTulemused = () => {
+        for (let i = 0; i < questionBlockStats.length; ++i) {
+
+            //summa += <p> questionBlockStats[i].protsentuaalne_tagasiside </p>;
+            console.log(questionBlockStats[i].protsentuaalne_tagasiside);
+        }
+    }
+    const ChartComponent = () => {
+        const data = {
+            labels: ['Plokk 1', 'Plokk 2', 'Plokk 3', 'Plokk 4', 'Plokk 5', 'Plokk 6'],
+            datasets: [
+                {
+                    label: '',
+                    data: [95, 10, 0, 25.5, 6, 50],
+                    backgroundColor: [
+                        'rgba(71, 145, 89, 1)',
+                        'rgba(71, 145, 89, 1)',
+                        'rgba(71, 145, 89, 1)',
+                        'rgba(71, 145, 89, 1)',
+                        'rgba(71, 145, 89, 1)',
+                        'rgba(71, 145, 89, 1)',
+                    ],
+                },
+            ],
+        };
+
+        const options = {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: 100, // Set the maximum value to 100
+                    min: 0,   // Set the minimum value to 0
+                },
+            },
+        };
+
+        return (
+            <div>
+                <h2>Tulemused</h2>
+                <Bar data={data} options={options} />
+            </div>
+        );
+    }
+
     if (questionnaireEnd) {
         return (
             <section className="tulemuse_vaheleht-container">
@@ -176,13 +227,16 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         );
     }
 
+
     if (tulemuseVaheleht) {
         const roundedPercent = Math.round(curProtsentuaalneTulemus * 100, 1) / 100;
         return (
+
             <section className="tulemuse_vaheleht-container">
                 <h2>Ploki tulemus: {roundedPercent} %</h2>
                 <h3>Tagasiside</h3>
                 <p>{currentFeedback}</p>
+                {ChartComponent()}
                 {statPageBtnHandler()}
             </section>
         );
