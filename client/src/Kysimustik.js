@@ -27,6 +27,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
     const [questionBlockStats, setQuestionBlockStats] = useState([]);
     const [questionnaireEnd, setQuestionnaireEnd] = useState(false)
     const [finalResult, setFinalResult] = useState(0)
+    const [KysimustikNames, setKysimustikNames] = useState([])
 
 
     useEffect(() => {
@@ -181,16 +182,19 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             console.log(questionBlockStats[i].protsentuaalne_tagasiside);
         }
     }
+
     const ChartComponent = () => {
         const plokkArray = [];
         const percentageArray = [];
         const colorArray = [];
+        const nimiArray = ["Õppija toetamine", "Õpi- ja õpetamistegevuse kavandamine", "Õpetamine", "Refleksioon ja professionaalne enesearendamine", "Koostöö ja juhendamine", "Arendus, loome- ja teadustegevus"];
         let percentage;
         let word;
         let color;
 
+
         for (let i = 1; i <= questionBlockStats.length; i++) {
-            word = "Plokk " + i + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
+            word = i + ". " + nimiArray[i-1] + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
             plokkArray.push(word);
 
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
@@ -223,7 +227,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
 
         return (
             <div>
-                <h2>Tulemused</h2>
+                <h2>Õpetaja kutsealune kompetentsus</h2>
                 <Bar data={data} options={options} />
             </div>
         );
