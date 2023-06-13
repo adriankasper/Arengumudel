@@ -210,7 +210,14 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
             percentageArray.push(percentage);
 
-            color = 'rgba(71, 145, 89, 1)';
+            //color = 'rgba(71, 145, 89, 1)';
+            if (percentage < 55){
+                color = 'rgb(244,49,50)';
+            } else if (percentage < 77) {
+                color = 'rgb(249,213,74)';
+            } else {
+                color = 'rgba(29, 210, 110, 1)';
+            }
             colorArray.push(color);
         }
         const data = {
@@ -262,9 +269,9 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             percentage = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
             percentageArray.push(percentage);
 
-            if (percentage < 33){
+            if (percentage < 55){
                 color = 'rgb(244,49,50)';
-            } else if (percentage < 66) {
+            } else if (percentage < 77) {
                 color = 'rgb(249,213,74)';
             } else {
                 color = 'rgba(29, 210, 110, 1)';
@@ -313,7 +320,6 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             <section className="tulemuse_vaheleht-container">
                 <h5>Keskmine lõpptulemus: {finalResult}%</h5>
                 {HorizontalBarChartComponent()}
-                {VerticalBarChartComponent()}
             </section>
         );
     }
