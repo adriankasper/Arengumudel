@@ -194,7 +194,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         }
     }
 
-    const ChartComponent = () => {
+    const HorizontalBarChartComponent = () => {
         const plokkArray = [];
         const percentageArray = [];
         const colorArray = [];
@@ -247,12 +247,73 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             </div>
         );
     }
+    const VerticalBarChartComponent = () => {
+        const plokkArray = [];
+        const percentageArray = [];
+        const colorArray = [];
+        let percentage;
+        let word;
+        let color;
+
+            //word = "Ploki tulemus" + " | " + (Math.round(curProtsentuaalneTulemus * 100, 1) / 100) + "%";
+            word = "🟢 - Hea | 🟡 - Keskmine | 🔴 - Halb";
+            plokkArray.push(word);
+
+            percentage = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
+            percentageArray.push(percentage);
+
+            if (percentage < 33){
+                color = 'rgb(244,49,50)';
+            } else if (percentage < 66) {
+                color = 'rgb(249,213,74)';
+            } else {
+                color = 'rgba(29, 210, 110, 1)';
+            }
+            colorArray.push(color);
+
+        const data = {
+            labels: plokkArray,
+            datasets: [
+                {
+                    label: '',
+                    data: percentageArray,
+                    backgroundColor: colorArray,
+                },
+            ],
+        };
+
+        const options = {
+            indexAxis: 'x',
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    min: 0,
+                },
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
+            barThickness: 50,
+        };
+
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <div style={{ width: "500px"}}>
+                <Bar data={data} width={"500%"} height={"500px"} options={options} />
+            </div>
+            </div>
+        );
+    }
 
     if (questionnaireEnd) {
         return (
             <section className="tulemuse_vaheleht-container">
                 <h5>Keskmine lõpptulemus: {finalResult}%</h5>
-                {ChartComponent()}
+                {HorizontalBarChartComponent()}
+                {VerticalBarChartComponent()}
             </section>
         );
     }
@@ -264,6 +325,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
 
             <section className="tulemuse_vaheleht-container">
                 <h2>Ploki tulemus: {roundedPercent} %</h2>
+                {VerticalBarChartComponent()}
                 <h3>Tagasiside</h3>
                 <p>{currentFeedback}</p>
                 {statPageBtnHandler()}
