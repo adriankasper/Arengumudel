@@ -11,6 +11,7 @@ Chart.register(...registerables);
 require('dotenv').config()
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
 const kysimused_url = `${SERVER_URL}/getKysimused`;
+const kysimustePlokkNames_url = `${SERVER_URL}/getKysimustePlokk`;
 const salvestamise_url = `${SERVER_URL}/kirjutaVastused`;
 
 const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
@@ -25,9 +26,19 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
     const [currentFeedback, setCurrentFeedback] = useState('');
     const [currentFeedbackId, setCurrentFeedbackId] = useState(0);
     const [questionBlockStats, setQuestionBlockStats] = useState([]);
-    const [questionnaireEnd, setQuestionnaireEnd] = useState(false)
-    const [finalResult, setFinalResult] = useState(0)
-    const [KysimustikNames, setKysimustikNames] = useState([])
+    const [questionnaireEnd, setQuestionnaireEnd] = useState(false);
+    const [finalResult, setFinalResult] = useState(0);
+    const [kysimustePlokkNames, setKysimustePlokkNames] = useState([]);
+
+    useEffect(() => {
+        axios.get(kysimustePlokkNames_url + "?kysimusteplokk_id=1")
+            .then((response) => {
+                if (response.data) {
+                    setKysimustePlokkNames(response.data);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, [])
 
 
     useEffect(() => {
@@ -187,14 +198,13 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         const plokkArray = [];
         const percentageArray = [];
         const colorArray = [];
-        const nimiArray = ["Õppija toetamine", "Õpi- ja õpetamistegevuse kavandamine", "Õpetamine", "Refleksioon ja professionaalne enesearendamine", "Koostöö ja juhendamine", "Arendus, loome- ja teadustegevus"];
         let percentage;
         let word;
         let color;
 
 
         for (let i = 1; i <= questionBlockStats.length; i++) {
-            word = i + ". " + nimiArray[i-1] + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
+            word = i + ". " + kysimustePlokkNames[i-1]['kysimusteplokk_nimi'] + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
             plokkArray.push(word);
 
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
@@ -221,6 +231,11 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
                     beginAtZero: true,
                     max: 100,
                     min: 0,
+                },
+            },
+            plugins: {
+                legend: {
+                    display: false,
                 },
             },
         };

@@ -33,8 +33,9 @@ app.post('/tekitaKysimustik', routes.tekitaVastused, routes.tekitaVastusedHandle
 app.post('/getKysimused', routes.getKysimused, routes.getKysimusedHandler);
 app.post('/getSoovitused', routes.getSoovitused, routes.getSoovitusedHandler);
 app.post('/getFeedback', routes.getFeedback, routes.getFeedbackHandler);
+app.get('/getKysimustePlokk', routes.getKysimustePlokkName, routes.getKysimustePlokkNameHandler);
 app.post('/saveFeedback', routes.saveFeedback);
-app.post('/saveFinalResult', routes.saveFinalResult)
+app.post('/saveFinalResult', routes.saveFinalResult);
 
 //Login/token routes
 app.post('/login', token.loginRoute);
