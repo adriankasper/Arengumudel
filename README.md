@@ -31,6 +31,13 @@ Projekti kavandamisega alustati 2021 kevadsemester ning koodi hakati kirjutama j
 * **Martin Kilgi**
 * **Mait Jurask**
 
+## Edasiarendajad
+* **Adrian Käsper**
+* **Sander Sims**
+* **Andre Piiriste**
+* **Reigo Kurgpõld**
+
+
 ## Paigaldusjuhised
 
 ### 1. Andmebaasi ülesseadmine

@@ -11,6 +11,7 @@ Chart.register(...registerables);
 require('dotenv').config()
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
 const kysimused_url = `${SERVER_URL}/getKysimused`;
+const kysimustePlokkNames_url = `${SERVER_URL}/getKysimustePlokk`;
 const salvestamise_url = `${SERVER_URL}/kirjutaVastused`;
 
 const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
@@ -25,8 +26,19 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
     const [currentFeedback, setCurrentFeedback] = useState('');
     const [currentFeedbackId, setCurrentFeedbackId] = useState(0);
     const [questionBlockStats, setQuestionBlockStats] = useState([]);
-    const [questionnaireEnd, setQuestionnaireEnd] = useState(false)
-    const [finalResult, setFinalResult] = useState(0)
+    const [questionnaireEnd, setQuestionnaireEnd] = useState(false);
+    const [finalResult, setFinalResult] = useState(0);
+    const [kysimustePlokkNames, setKysimustePlokkNames] = useState([]);
+
+    useEffect(() => {
+        axios.get(kysimustePlokkNames_url + "?kysimusteplokk_id=1")
+            .then((response) => {
+                if (response.data) {
+                    setKysimustePlokkNames(response.data);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, [])
 
 
     useEffect(() => {
@@ -181,7 +193,8 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             console.log(questionBlockStats[i].protsentuaalne_tagasiside);
         }
     }
-    const ChartComponent = () => {
+
+    const HorizontalBarChartComponent = () => {
         const plokkArray = [];
         const percentageArray = [];
         const colorArray = [];
@@ -189,14 +202,22 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         let word;
         let color;
 
+
         for (let i = 1; i <= questionBlockStats.length; i++) {
-            word = "Plokk " + i + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
+            word = i + ". " + kysimustePlokkNames[i-1]['kysimusteplokk_nimi'] + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
             plokkArray.push(word);
 
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
             percentageArray.push(percentage);
 
-            color = 'rgba(71, 145, 89, 1)';
+            //color = 'rgba(71, 145, 89, 1)';
+            if (percentage < 55){
+                color = 'rgb(244,49,50)';
+            } else if (percentage < 77) {
+                color = 'rgb(249,213,74)';
+            } else {
+                color = 'rgba(29, 210, 110, 1)';
+            }
             colorArray.push(color);
         }
         const data = {
@@ -219,12 +240,77 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
                     min: 0,
                 },
             },
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
         };
 
         return (
             <div>
-                <h2>Tulemused</h2>
+                <h2>Õpetaja kutsealune kompetentsus</h2>
                 <Bar data={data} options={options} />
+            </div>
+        );
+    }
+    const VerticalBarChartComponent = () => {
+        const plokkArray = [];
+        const percentageArray = [];
+        const colorArray = [];
+        let percentage;
+        let word;
+        let color;
+
+            //word = "Ploki tulemus" + " | " + (Math.round(curProtsentuaalneTulemus * 100, 1) / 100) + "%";
+            word = "🟢 - Hea | 🟡 - Keskmine | 🔴 - Halb";
+            plokkArray.push(word);
+
+            percentage = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
+            percentageArray.push(percentage);
+
+            if (percentage < 55){
+                color = 'rgb(244,49,50)';
+            } else if (percentage < 77) {
+                color = 'rgb(249,213,74)';
+            } else {
+                color = 'rgba(29, 210, 110, 1)';
+            }
+            colorArray.push(color);
+
+        const data = {
+            labels: plokkArray,
+            datasets: [
+                {
+                    label: '',
+                    data: percentageArray,
+                    backgroundColor: colorArray,
+                },
+            ],
+        };
+
+        const options = {
+            indexAxis: 'x',
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    min: 0,
+                },
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
+            barThickness: 50,
+        };
+
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <div style={{ width: "500px"}}>
+                <Bar data={data} width={"500%"} height={"500px"} options={options} />
+            </div>
             </div>
         );
     }
@@ -233,7 +319,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         return (
             <section className="tulemuse_vaheleht-container">
                 <h5>Keskmine lõpptulemus: {finalResult}%</h5>
-                {ChartComponent()}
+                {HorizontalBarChartComponent()}
             </section>
         );
     }
@@ -245,6 +331,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
 
             <section className="tulemuse_vaheleht-container">
                 <h2>Ploki tulemus: {roundedPercent} %</h2>
+                {VerticalBarChartComponent()}
                 <h3>Tagasiside</h3>
                 <p>{currentFeedback}</p>
                 {statPageBtnHandler()}

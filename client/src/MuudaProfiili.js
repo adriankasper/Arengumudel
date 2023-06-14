@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import { NavLink} from "react-router-dom";
 import {useUserContext} from './userContext';
 import { ToastContainer, toast } from 'react-toastify';
+import validator from "validator";
 require('dotenv').config();
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
 
@@ -166,6 +167,7 @@ const Profile = () => {
 
        
     // }, [changeStatus])
+
 
 
     return(

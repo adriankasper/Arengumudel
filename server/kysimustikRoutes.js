@@ -1,5 +1,27 @@
 const db = require('./database').db;
 
+exports.getKysimustePlokkName = (req, res, next) => {
+    if (req.query.kysimusteplokk_id !== undefined) {
+        const kysimusteplokk_id = req.query.kysimusteplokk_id;
+        db.query(`SELECT kysimusteplokk_nimi
+                  FROM kysimusteplokk
+                  WHERE kysimustik_id = ${kysimusteplokk_id} ORDER BY kysimusteplokk_id`, (error, results, fields) => {
+            if (error) throw error;
+            const resultsJson = results.map((result) => {
+                return Object.assign({}, result);
+            })
+            req.data = resultsJson;
+            next();
+        });
+    } else {
+        console.log("ERROR: KysimustePlokk_id missing");
+    }
+};
+
+exports.getKysimustePlokkNameHandler = (req, res) => {
+    res.json(req.data);
+};
+
 exports.getKasutaja = (req, res) => {
   if (req.body.kasutajaid !== undefined) {
     const kasutajaid = req.body.kasutajaid;
