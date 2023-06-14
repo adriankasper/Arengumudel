@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.21.1",
+    "chart.js": "^3.9.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemailer": "^6.6.1",

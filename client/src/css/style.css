@@ -305,8 +305,14 @@ font-size:1.5rem;
 margin-bottom:30vh;
 }
 
-.kysimustik-container,.about {
-margin-bottom:60vh;
+.captcha-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.kysimustik-container, .about {
+    margin-bottom: 60vh;
 }
 
 .oppematerjal-container-1 {
