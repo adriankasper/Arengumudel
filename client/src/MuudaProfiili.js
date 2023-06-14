@@ -99,57 +99,69 @@ const Profile = () => {
     const onFileChange = (e) => {
         setSelectedFile(e.target.files[0]);
     }
-    
-    const changeProfile = () => {
-        axios.post(`${SERVER_URL}/changeprofile`, {
-            email: email,
-            phone: phone,
-            job: job,
-            firstName: firstName,
-            lastName: lastName,
-            userid: userId
-        }).then((response) => {
-            console.log("SEE ON RESPONSE: " + JSON.stringify(response.data));
-            console.log("Response code: " + response.status);
-            if (JSON.stringify(response.data.msg)) {
-                setChangeStatus(true);
-                if (response.status == 200) {
-                    toast.success('Andmete salvestamine õnnestus!', {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: false,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                    });
-                } else {
-                    toast.error('Midagi läks valesti!', {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: false,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        });  
-                }
-                
-                console.log("SEE ON CHANGESTATUS: " + changeStatus);
-            }
-            
-            //history.push("/login");
-            //window.location.reload();
-        }, (error) => {
-            console.log(error);
-            setChangeStatus(false);
-        })
 
-        axios.post(`${SERVER_URL}/useridtest`, {
-            kasutajaid: userId
-        }).then((response) => {
-            console.log("SEE RESPONSE: " + JSON.stringify(response.data));
-        })
+    const changeProfile = () => {
+        if (validator.isEmail(email)) {
+            axios.post(`${SERVER_URL}/changeprofile`, {
+                email: email,
+                phone: phone,
+                job: job,
+                firstName: firstName,
+                lastName: lastName,
+                userid: userId
+            }).then((response) => {
+                console.log("SEE ON RESPONSE: " + JSON.stringify(response.data));
+                console.log("Response code: " + response.status);
+                if (JSON.stringify(response.data.msg)) {
+                    setChangeStatus(true);
+                    if (response.status == 200) {
+                        toast.success('Andmete salvestamine õnnestus!', {
+                            position: "top-right",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: false,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        });
+                    } else {
+                        toast.error('Midagi läks valesti!', {
+                            position: "top-right",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: false,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        });
+                    }
+
+                    console.log("SEE ON CHANGESTATUS: " + changeStatus);
+                }
+
+                //history.push("/login");
+                //window.location.reload();
+            }, (error) => {
+                console.log(error);
+                setChangeStatus(false);
+            })
+
+            axios.post(`${SERVER_URL}/useridtest`, {
+                kasutajaid: userId
+            }).then((response) => {
+                console.log("SEE RESPONSE: " + JSON.stringify(response.data));
+            })
+        } else {
+            toast.error('Email ei ole korrektne!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        }
     }
 
     // useEffect(() => {

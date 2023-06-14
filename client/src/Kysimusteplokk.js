@@ -54,14 +54,15 @@ const Kysimusteplokk = ({kysimused, displayPlokkButtons, setKysimusteVastused, k
 
     const displayButtons = () => {
         if (selectedAlamPlokk === 0) {
-            return <button type="button" className="kysimuste-plokk-button" onClick={() => setSelectedAlamPlokk(selectedAlamPlokk + 1)}>Jargmine alamplokk</button>;
+
+            return <button type="button" className="kysimuste-plokk-button" onClick={() => (setSelectedAlamPlokk(selectedAlamPlokk + 1), window.scrollTo(0, 0))}>Jargmine alamplokk</button>;
         } else if (selectedAlamPlokk === mituAlamPlokki - 1) {
-            return <button type="button" className="kysimuste-plokk-button" onClick={() => setSelectedAlamPlokk(selectedAlamPlokk - 1)}>Eelmine alamplokk</button>;
+            return <button type="button" className="kysimuste-plokk-button" onClick={() => (setSelectedAlamPlokk(selectedAlamPlokk - 1), window.scrollTo(0, 0))}>Eelmine alamplokk</button>;
         } else {
             return(
                 <React.Fragment>
-                    <button type="button" className="kysimuste-plokk-button"  onClick={() => setSelectedAlamPlokk(selectedAlamPlokk - 1)}>Eelmine alamplokk</button>
-                    <button type="button" className="kysimuste-plokk-button"  onClick={() => setSelectedAlamPlokk(selectedAlamPlokk + 1)}>Jargmine alamplokk</button>
+                    <button type="button" className="kysimuste-plokk-button"  onClick={() => (setSelectedAlamPlokk(selectedAlamPlokk - 1), window.scrollTo(0, 0))}>Eelmine alamplokk</button>
+                    <button type="button" className="kysimuste-plokk-button"  onClick={() => (setSelectedAlamPlokk(selectedAlamPlokk + 1), window.scrollTo(0, 0))}>Jargmine alamplokk</button>
                 </React.Fragment>
             );
         }
