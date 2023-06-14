@@ -5,6 +5,7 @@ import Kysimusteplokk from './Kysimusteplokk';
 import { toast } from 'react-toastify';
 import { Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
+import GaugeChart from "react-gauge-chart";
 Chart.register(...registerables);
 
 
@@ -124,7 +125,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             .catch((error) => console.log("Failed to write finalResult: " + error));
         }
         // 
-    }, [finalResult]) 
+    }, [finalResult])
 
     const getFeedback = async () => {
         if (curProtsentuaalneTulemus > 0) {
@@ -254,63 +255,40 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             </div>
         );
     }
-    const VerticalBarChartComponent = () => {
-        const plokkArray = [];
-        const percentageArray = [];
-        const colorArray = [];
-        let percentage;
-        let word;
-        let color;
+    const GaugeChartComponent = () => {
 
-            //word = "Ploki tulemus" + " | " + (Math.round(curProtsentuaalneTulemus * 100, 1) / 100) + "%";
-            word = "🟢 - Hea | 🟡 - Keskmine | 🔴 - Halb";
-            plokkArray.push(word);
-
-            percentage = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
-            percentageArray.push(percentage);
-
-            if (percentage < 55){
-                color = 'rgb(244,49,50)';
-            } else if (percentage < 77) {
-                color = 'rgb(249,213,74)';
-            } else {
-                color = 'rgba(29, 210, 110, 1)';
+        let score = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
+        const gageCalc = score => {
+            var result = 0;
+            if (score >= 0 && score <= 33) {
+                result = getPercentage(score, 0, 33, 0);
+            } else if (score > 33 && score < 66) {
+                result = getPercentage(score, 33, 66, 0.33);
+            } else if (score >= 66 && score <= 100) {
+                result = getPercentage(score, 66, 100, 0.66);
             }
-            colorArray.push(color);
-
-        const data = {
-            labels: plokkArray,
-            datasets: [
-                {
-                    label: '',
-                    data: percentageArray,
-                    backgroundColor: colorArray,
-                },
-            ],
+            return result;
         };
 
-        const options = {
-            indexAxis: 'x',
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 100,
-                    min: 0,
-                },
-            },
-            plugins: {
-                legend: {
-                    display: false,
-                },
-            },
-            barThickness: 50,
-        };
+        function getPercentage(score, lowerBound, upperBound, segmentAdjustment) {
+            return (
+                (score - lowerBound) / (upperBound - lowerBound) / 3 + segmentAdjustment
+            );
+        }
 
         return (
-            <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <div style={{ width: "500px"}}>
-                <Bar data={data} width={"500%"} height={"500px"} options={options} />
-            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh'}}>
+
+                <GaugeChart
+                    id="gauge-chart"
+                    percent={gageCalc(score)}
+                    nrOfLevels={3}
+                    colors={["#FF0000", "#FFFF00", "#228B22"]}
+                    hideText={true}
+                    style={{ width: '300px'}}
+                    arcWidth={0.3}
+
+                />
             </div>
         );
     }
@@ -331,7 +309,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
 
             <section className="tulemuse_vaheleht-container">
                 <h2>Ploki tulemus: {roundedPercent} %</h2>
-                {VerticalBarChartComponent()}
+                {GaugeChartComponent()}
                 <h3>Tagasiside</h3>
                 <p>{currentFeedback}</p>
                 {statPageBtnHandler()}
