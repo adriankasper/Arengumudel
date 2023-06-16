@@ -65,7 +65,7 @@ const Header = () => {
     };
 
     const activePage = {
-        color: '#fff',
+        color: 'rgba(255, 255, 255, 0.7)',
         textDecoration: 'underline'
     };
 
@@ -125,12 +125,20 @@ const Header = () => {
 
     return (
         <header>
-            <div className="navbar-content">
+            <div className="navbar-content"  style={{alignItems: 'left'}}>
                 <div id="hamburger-icon" onClick={showBurgerMenu}>  
                     <GoThreeBars />
                 </div>
-                <h1><NavLink id="navbar-logo" to="/profile" style={buttonStyleSecondary}>Logo</NavLink></h1>
-                
+
+                <div id="nav-item" style={{display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '100px'}}>
+                    <img style={{    maxWidth: '100%',
+                        maxHeight: '100%',
+                        width: 'auto',
+                        height: 'auto',}} src={process.env.PUBLIC_URL + "siteLogo.svg"} alt='Logo'></img>
+                </div>
                 <div id="nav-item">
                     <NavLink activeStyle={activePage} to="/profile" style={buttonStyle}>Profiil</NavLink>
                 </div>

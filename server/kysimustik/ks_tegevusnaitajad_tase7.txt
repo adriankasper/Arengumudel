@@ -79,7 +79,7 @@ INSERT INTO Soovitus (soovitus_tekst, kysimus_id) VALUES (" Kirjelda oma tegevus
 INSERT INTO Kysimus (kysimus_tekst, kysimusteplokk_id) VALUES ("3.24. Kooskõlastan nii õppijate ja kui ka lapsevanematega  tagasisidestamise põhimõtted ja korralduse", 3);
 INSERT INTO Soovitus (soovitus_tekst, kysimus_id) VALUES ("Too näiteid juhendamistest.
 Analüüsi tulemusi ja muutusi.", 41);
-INSERT INTO KysimustePlokk (kysimusteplokk_nimi, kysimustik_id) VALUES ("4. Refleksioon ja professionaalne enesearendamine", 1);
+INSERT INTO KysimustePlokk (kysimusteplokk_nimi, kysimustik_id) VALUES ("Refleksioon ja professionaalne enesearendamine", 1);
 INSERT INTO Kysimus (kysimus_tekst, kysimusteplokk_id) VALUES ("4.1. Reflekteerin oma tööd, sh analüüsin oma õpetamise mõju, kasutades erinevaid meetodeid, kaasates kolleege ja osaledes õpikogukondades, sh virtuaalsetes", 4);
 INSERT INTO Soovitus (soovitus_tekst, kysimus_id) VALUES ("Reflekteeri oma tööd, sh analüüsi oma õpetamise mõju, isades tõenduspõhist materjali ning too näiteid. Kirjelda õppijate eripärasid ja õppija üldpädevuste arengu toetamist ja grupiprotsesse näidete varal. Lisalugemine: https://tulevikuopetaja.edu.ee/moodul-v/refleksioon-opetaja-professionaalses-arengus/", 42);
 INSERT INTO Kysimus (kysimus_tekst, kysimusteplokk_id) VALUES ("4.2. Kogun pidevalt tagasisidet õppijate õpitegevuste ning -tulemuste kohta, kavandades muudatusi õpetamis- ja kasvatusprotsessis ", 4);

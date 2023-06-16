@@ -5,12 +5,14 @@ import Kysimusteplokk from './Kysimusteplokk';
 import { toast } from 'react-toastify';
 import { Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
+import GaugeChart from "react-gauge-chart";
 Chart.register(...registerables);
 
 
 require('dotenv').config()
 const SERVER_URL = process.env.REACT_APP_SERVER_URL
 const kysimused_url = `${SERVER_URL}/getKysimused`;
+const kysimustePlokkNames_url = `${SERVER_URL}/getKysimustePlokk`;
 const salvestamise_url = `${SERVER_URL}/kirjutaVastused`;
 
 const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
@@ -25,8 +27,19 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
     const [currentFeedback, setCurrentFeedback] = useState('');
     const [currentFeedbackId, setCurrentFeedbackId] = useState(0);
     const [questionBlockStats, setQuestionBlockStats] = useState([]);
-    const [questionnaireEnd, setQuestionnaireEnd] = useState(false)
-    const [finalResult, setFinalResult] = useState(0)
+    const [questionnaireEnd, setQuestionnaireEnd] = useState(false);
+    const [finalResult, setFinalResult] = useState(0);
+    const [kysimustePlokkNames, setKysimustePlokkNames] = useState([]);
+
+    useEffect(() => {
+        axios.get(kysimustePlokkNames_url + "?kysimusteplokk_id=1")
+            .then((response) => {
+                if (response.data) {
+                    setKysimustePlokkNames(response.data);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, [])
 
 
     useEffect(() => {
@@ -112,7 +125,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             .catch((error) => console.log("Failed to write finalResult: " + error));
         }
         // 
-    }, [finalResult]) 
+    }, [finalResult])
 
     const getFeedback = async () => {
         if (curProtsentuaalneTulemus > 0) {
@@ -181,22 +194,34 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
             console.log(questionBlockStats[i].protsentuaalne_tagasiside);
         }
     }
-    const ChartComponent = () => {
+
+    const HorizontalBarChartComponent = () => {
         const plokkArray = [];
         const percentageArray = [];
         const colorArray = [];
         let percentage;
         let word;
         let color;
+        //let testKysimustePlokkNames = ["Õppija toetamine", "Õpi- ja õpetamistegevuse kavandamine", "Õpetamine", "Refleksioon ja professionaalne enesearendamine", "Arendus, loome- ja teadustegevus"];
+        //let testPercentage = [100, 66.667, 0, 33.334, 75, 50];
 
         for (let i = 1; i <= questionBlockStats.length; i++) {
-            word = "Plokk " + i + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
+            word = i + ". " + kysimustePlokkNames[i-1]['kysimusteplokk_nimi'] + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
+            //word = i + ". " + testKysimustePlokkNames[i-1] + " | " + testPercentage[i-1] + "%";
             plokkArray.push(word);
 
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
+            //percentage = testPercentage[i-1];
             percentageArray.push(percentage);
 
-            color = 'rgba(71, 145, 89, 1)';
+            //color = 'rgba(71, 145, 89, 1)';
+            if (percentage < 35){
+                color = 'rgb(244,49,50)';
+            } else if (percentage < 66) {
+                color = 'rgb(249,213,74)';
+            } else {
+                color = 'rgba(71, 145, 89, 1)';
+            }
             colorArray.push(color);
         }
         const data = {
@@ -213,18 +238,67 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         const options = {
             indexAxis: 'y',
             scales: {
+                y: {
+                    ticks: {
+                        font: {
+                            size: 20,
+                        }
+                    }
+                },
                 x: {
                     beginAtZero: true,
                     max: 100,
                     min: 0,
                 },
             },
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
         };
 
         return (
             <div>
-                <h2>Tulemused</h2>
+                <h2>Õpetaja kutsealune kompetentsus</h2>
                 <Bar data={data} options={options} />
+            </div>
+        );
+    }
+    const GaugeChartComponent = () => {
+
+        let score = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
+        const gageCalc = score => {
+            var result = 0;
+            if (score >= 0 && score <= 35) {
+                result = getPercentage(score, 0, 33, 0);
+            } else if (score > 33 && score < 66) {
+                result = getPercentage(score, 33, 66, 0.33);
+            } else if (score >= 66 && score <= 100) {
+                result = getPercentage(score, 66, 100, 0.66);
+            }
+            return result;
+        };
+
+        function getPercentage(score, lowerBound, upperBound, segmentAdjustment) {
+            return (
+                (score - lowerBound) / (upperBound - lowerBound) / 3 + segmentAdjustment
+            );
+        }
+
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh'}}>
+
+                <GaugeChart
+                    id="gauge-chart"
+                    percent={gageCalc(score)}
+                    nrOfLevels={3}
+                    colors={["#FF0000", "#FFFF00", "#479159"]}
+                    hideText={true}
+                    style={{ width: '300px'}}
+                    arcWidth={0.3}
+
+                />
             </div>
         );
     }
@@ -233,7 +307,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         return (
             <section className="tulemuse_vaheleht-container">
                 <h5>Keskmine lõpptulemus: {finalResult}%</h5>
-                {ChartComponent()}
+                {HorizontalBarChartComponent()}
             </section>
         );
     }
@@ -245,6 +319,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
 
             <section className="tulemuse_vaheleht-container">
                 <h2>Ploki tulemus: {roundedPercent} %</h2>
+                {GaugeChartComponent()}
                 <h3>Tagasiside</h3>
                 <p>{currentFeedback}</p>
                 {statPageBtnHandler()}

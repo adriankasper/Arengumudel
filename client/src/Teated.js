@@ -1,6 +1,7 @@
 import React from 'react'; 
 import {Switch} from 'react-router-dom';
 import Profilecard from './Profilecard';
+import {Bar} from "react-chartjs-2";
 
 const Teated = () => {
     return (
@@ -14,6 +15,8 @@ const Teated = () => {
             </section>
         </section>
     )
+
 }
+
 
 export default Teated;
