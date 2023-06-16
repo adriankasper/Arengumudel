@@ -293,7 +293,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
                     id="gauge-chart"
                     percent={gageCalc(score)}
                     nrOfLevels={3}
-                    colors={["#FF0000", "#FFFF00", "#479159"]}
+                    colors={["#f43132", "#f9d54a", "#479159"]}
                     hideText={true}
                     style={{ width: '300px'}}
                     arcWidth={0.3}
