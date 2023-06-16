@@ -101,7 +101,7 @@ const Profile = () => {
     }
 
     const changeProfile = () => {
-        if (validator.isEmail(email)) {
+        if (validator.isEmail(email) || email == "") {
             axios.post(`${SERVER_URL}/changeprofile`, {
                 email: email,
                 phone: phone,
