@@ -202,22 +202,25 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         let percentage;
         let word;
         let color;
-
+        //let testKysimustePlokkNames = ["Õppija toetamine", "Õpi- ja õpetamistegevuse kavandamine", "Õpetamine", "Refleksioon ja professionaalne enesearendamine", "Arendus, loome- ja teadustegevus"];
+        //let testPercentage = [100, 66.667, 0, 33.334, 75, 50];
 
         for (let i = 1; i <= questionBlockStats.length; i++) {
             word = i + ". " + kysimustePlokkNames[i-1]['kysimusteplokk_nimi'] + " | " + questionBlockStats[i-1].protsentuaalne_tagasiside.toFixed(2) + "%";
+            //word = i + ". " + testKysimustePlokkNames[i-1] + " | " + testPercentage[i-1] + "%";
             plokkArray.push(word);
 
             percentage = questionBlockStats[i-1].protsentuaalne_tagasiside;
+            //percentage = testPercentage[i-1];
             percentageArray.push(percentage);
 
             //color = 'rgba(71, 145, 89, 1)';
-            if (percentage < 55){
+            if (percentage < 35){
                 color = 'rgb(244,49,50)';
-            } else if (percentage < 77) {
+            } else if (percentage < 66) {
                 color = 'rgb(249,213,74)';
             } else {
-                color = 'rgba(29, 210, 110, 1)';
+                color = 'rgba(71, 145, 89, 1)';
             }
             colorArray.push(color);
         }
@@ -235,6 +238,13 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         const options = {
             indexAxis: 'y',
             scales: {
+                y: {
+                    ticks: {
+                        font: {
+                            size: 20,
+                        }
+                    }
+                },
                 x: {
                     beginAtZero: true,
                     max: 100,
@@ -260,7 +270,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
         let score = (Math.round(curProtsentuaalneTulemus * 100, 1) / 100);
         const gageCalc = score => {
             var result = 0;
-            if (score >= 0 && score <= 33) {
+            if (score >= 0 && score <= 35) {
                 result = getPercentage(score, 0, 33, 0);
             } else if (score > 33 && score < 66) {
                 result = getPercentage(score, 33, 66, 0.33);
@@ -283,7 +293,7 @@ const Kysimustik = ({kysimustik_id, profiil_kysimustik_id}) => {
                     id="gauge-chart"
                     percent={gageCalc(score)}
                     nrOfLevels={3}
-                    colors={["#FF0000", "#FFFF00", "#228B22"]}
+                    colors={["#FF0000", "#FFFF00", "#479159"]}
                     hideText={true}
                     style={{ width: '300px'}}
                     arcWidth={0.3}
