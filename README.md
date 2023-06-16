@@ -6,6 +6,9 @@
 <img src="gitimages/opetajaprof_2.PNG" width="800" height="400"/>
 <img src="gitimages/opetajaprof_3.PNG" width="800" height="400"/>
 
+## Pildid edasiarendatud rakendusest
+
+
 ## Mis on meie rakenduse eesmärk?
 * Lihtsustada õpetajate enesearendus protsessi
 * Anda koolidele lihtsam viis õpetajaid hinnata
@@ -14,6 +17,7 @@
 ## Projektist endast
 Projekt on loodud TLÜ Digitehnoloogia Instituudi õpilaste poolt ning loodi Tarkvaraarenduse projekti kursuse raames.
 Projekti kavandamisega alustati 2021 kevadsemester ning koodi hakati kirjutama juunis 2021. 
+Projekti edasiarenduse kavandusega alustati 2023 kevadsemester ja koodi hakati kirjutama juunis 2023.
 
 ## Kasutatud tehnoloogiad
 * React (ver 17.0.2)
