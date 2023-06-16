@@ -1,4 +1,5 @@
 # Õpetaja professionaalse arengu mudel (TLÜ Suvepraktika projekt)
+<img src="gitimages/siteLogo.PNG" width="781" height="435"/>
 
 ## Pildid rakendusest
 
@@ -6,8 +7,11 @@
 <img src="gitimages/opetajaprof_2.PNG" width="800" height="400"/>
 <img src="gitimages/opetajaprof_3.PNG" width="800" height="400"/>
 
-## Pildid edasiarendatud rakendusest
 
+
+## Pildid edasiarendatud rakendusest
+<img src="gitimages/opetajaprof_4.PNG" width="800" height="400"/>
+<img src="gitimages/opetajaprof_5.PNG" width="800" height="400"/>
 
 ## Mis on meie rakenduse eesmärk?
 * Lihtsustada õpetajate enesearendus protsessi
@@ -40,6 +44,7 @@ Projekti edasiarenduse kavandusega alustati 2023 kevadsemester ja koodi hakati k
 * **Sander Sims**
 * **Andre Piiriste**
 * **Reigo Kurgpõld**
+* **Kristjan Peedisson**
 
 ## Paigaldusjuhised
 
@@ -73,10 +78,11 @@ Projekti edasiarenduse kavandusega alustati 2023 kevadsemester ja koodi hakati k
 Küsimustiku testimiseks valmistasime ka automaattesti, millega on võimalik kontrollida kas veebileht sisestab andmebaasi andmed õigesse kohta ja üleüldiselt, kas küsimustik töötab otsast lõpuni.
 Enne testi käivitamist tuleks muuta `kysimustikTest.py` failis rida serverURL enda serveri ip aadressi vastu
 Test asub `/server` kaustas ning seda saab käivitada käsuga `python kysimustikTest.py`
+Edasiarenduses lisati Seleniumi automaattest `KysimustikeTaitmine.side`, mis on eelnevate testidega samas kaustas.
 
 ## License
 
-Copyright 2021 Alex Nelke, Caroly Vilo, Martin Kilgi, Mait Jurask
+Copyright 2023 Sander Sims, Adrian Käsper, Andre Piiriste, Reigo Kurgpõld, Kristjan Peedisson.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

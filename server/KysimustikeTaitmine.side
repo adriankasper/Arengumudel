@@ -1,0 +1,3452 @@
+{
+  "id": "3a64af05-ce30-4237-9a40-836453f5afd5",
+  "version": "2.0",
+  "name": "arengumudel",
+  "url": "http://localhost:3000/kysimustikud",
+  "tests": [{
+    "id": "5016979e-12c2-4fb4-b99d-656ede90f08b",
+    "name": "KysimustikuTaitmine",
+    "commands": [{
+      "id": "1f74b7ec-3334-4926-bc9e-44352b5fbab3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/kysimustikud",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bec128ab-462f-47b1-8395-3ddba2e2fb93",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2576x1408",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73f289b1-2bda-4ffe-867e-f2315416473a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimustik-button",
+      "targets": [
+        ["css=.kysimustik-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/article/button", "xpath:idRelative"],
+        ["xpath=//article/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Täida')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59874193-e0c7-4edf-94ca-7cb7915e317d",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus1", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "054e5bdb-bbd0-40a1-8cbf-24c09c28c898",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf9da42c-a4e9-49f8-9679-6284881edf57",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "110d4b2d-c1cf-4515-80e1-7220d8fd60db",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus2",
+      "targets": [
+        ["name=vastus2", "name"],
+        ["xpath=(//input[@id='vastus'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17fd3879-9406-4457-81c0-aa1ec7bda587",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d9e2ad4-0eff-4b46-9445-d877e916aee2",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "0ae2bedc-150e-453c-8a0c-df6d5d3b590c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div", "xpath:idRelative"],
+        ["xpath=//article[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d499009-d097-4520-85f3-55631bcaeda1",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus3",
+      "targets": [
+        ["name=vastus3", "name"],
+        ["xpath=(//input[@id='vastus'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de9e3c99-d824-4c4d-a859-84107f519326",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77ba9887-fc67-4c93-8c9b-95257ab8ca2b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "ae981fb7-e09e-418a-b4c7-ad744819ba71",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus4",
+      "targets": [
+        ["name=vastus4", "name"],
+        ["xpath=(//input[@id='vastus'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c718229-7ff3-46dd-950f-315d6586c40a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ecbc0fd-556e-43a9-be0d-69fa38788bdf",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "083e0e14-43f0-43e6-8370-03dfa065e7f5",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus5",
+      "targets": [
+        ["name=vastus5", "name"],
+        ["xpath=(//input[@id='vastus'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ca045c2-bb03-45e7-b4dc-9588598ddd0e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd1ebbdc-8c25-47d2-8be4-b97e7b23930d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "a24ab306-4b3c-43c0-ad60-7bae3dfae893",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb1fa85c-ca19-46a9-9bf6-f3cc16b7c8e1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e36679f-927d-4f5b-8f9b-94a09da10970",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus6", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66388328-9aa0-41c7-9470-8588a751c18c",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33a1adfb-429c-46ff-9893-c1f01ba7b1f0",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d3d6fe88-a311-4720-add5-010f04e61f90",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus7",
+      "targets": [
+        ["name=vastus7", "name"],
+        ["xpath=(//input[@id='vastus'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d126b27a-eb4d-4b1b-bfad-99ea5c47a23e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ffc0f42-48fe-4dca-933a-e3adafe2d1b8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "c7ad251d-0411-4c47-aeb3-b88c59617974",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus8",
+      "targets": [
+        ["name=vastus8", "name"],
+        ["xpath=(//input[@id='vastus'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edd98eea-7812-434f-beb8-4adc7556c9cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f882a1c4-e9e6-40ac-af20-d55d14c3cb78",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "8eea1605-aa44-48e9-923a-c1a0210ea350",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div", "xpath:idRelative"],
+        ["xpath=//article[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0e83a31-7182-483b-b815-3c5eb5fafb53",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus9",
+      "targets": [
+        ["name=vastus9", "name"],
+        ["xpath=(//input[@id='vastus'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c29272bb-25aa-4db3-81c6-eec77314dbb5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2997d3a3-c0fd-4711-8185-01db5a24b7e5",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "e869ae17-c1c9-4f91-81a7-3e9bc53771cf",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus10",
+      "targets": [
+        ["name=vastus10", "name"],
+        ["xpath=(//input[@id='vastus'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a84f4f94-825c-403f-9855-b981a95fe4b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aee013d6-eaca-4788-8193-7137f3ce6bfd",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2dfefa45-5a24-46cf-bb00-52fc8be4b0d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button:nth-child(7)",
+      "targets": [
+        ["css=.kysimuste-plokk-button:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19512e80-a3ab-436d-9447-c21bd7212ae0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1237)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59f7d134-9791-42c6-82c2-dab62fbd2216",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus11", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24e1e740-fb26-4c3f-b29e-2e73e9b02d92",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01fb28b2-44b0-45d0-a0c9-0a221977287f",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "066d0764-4f1d-49d3-9834-b88d60f81f65",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus12",
+      "targets": [
+        ["name=vastus12", "name"],
+        ["xpath=(//input[@id='vastus'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40bb4cb2-310e-4d97-a2ac-5f5f08cbba6f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2145e743-bcf1-4670-8a53-f5ea2a2a09ac",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "45a7a879-98ea-404f-ae63-a8507a5d0b61",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus13",
+      "targets": [
+        ["name=vastus13", "name"],
+        ["xpath=(//input[@id='vastus'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d467ab49-9227-4777-8614-42e1e1c5a10b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "438fbd67-1b99-46d8-bd05-ad19f7633150",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "aecaf24a-40ce-47fb-a1cc-2d452f8d06de",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dec3f07-fada-41ab-89a5-f39504dc49a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.next-block-button",
+      "targets": [
+        ["css=.next-block-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/button", "xpath:idRelative"],
+        ["xpath=//section/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5be392bc-a0f9-4659-b6ec-cade56e570b2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a135fec-8a81-49ca-97d9-8891c11ab413",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[2]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41a3f5ea-9a0d-4c58-bd68-c2db7a3fae2f",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fe07a28-12ca-4cf9-b2e1-a7a2efb839ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d2d58a8f-4a6e-4562-91a9-60f72783ad0b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[5]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dd0963b-173f-4a35-afb9-2bbbf53e6083",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "980fda79-16df-4e2e-a3b3-01cfd6588905",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d259323c-2643-4e90-b9df-a75538cc3fbc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[8]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5af8acc8-0fb7-4208-96dc-1fdcf0ce1d63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbf08442-569c-4255-ac42-54a9a720e9e5",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "889aa2ed-0759-4d6e-8b0a-51087ea2fdb0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[11]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9c1fe3b-f91b-445e-b05e-efd93d070ac4",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ef0d0d5-9a32-48ed-a7cd-e5eff411ce39",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fffc4843-e133-42e4-9b75-24ab2fcbc586",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "3f1049f7-0f60-451b-a5f0-066a6f19c3f8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[14]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[14]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "229fa45a-30b2-4e22-8fe4-b11a482b3205",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e60292ce-6623-4352-ab29-0edbdaf82261",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "f10f579d-7c05-4f94-9625-d3a3e2187111",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4a301bf-20ae-4b45-b675-cfad4ee873fc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1700)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d26bdcd9-6320-4ab8-bf1e-cacf8215dcb1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[2]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd7c55f8-3584-4756-b01a-58f1252c7a94",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52deaff3-9655-493e-859c-f305a2e67bee",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "d2cd285b-c911-4658-bd79-40dedc33f542",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[5]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eb27fab-6534-4c49-9283-3b5671f550ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bd769b8-d2ba-482a-a263-b783a71013e0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "86f40ce7-e207-47d7-a958-46e8e6c0244f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[8]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "295e4b50-a2cf-491c-80a3-2842f8de6331",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d581448c-9d91-47dd-836e-903d1e9ed21c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "699127bf-b254-499e-8177-bcbc91c329b4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[11]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0df445c7-fb6b-4ecd-825a-ff73235c0630",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a6555df-dddb-4764-a625-85cd28dce652",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "60059a51-3d7c-4d45-8a16-e2a492f4a408",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64dc7b49-3021-4fea-ad27-88800b24fad9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.next-block-button",
+      "targets": [
+        ["css=.next-block-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/button", "xpath:idRelative"],
+        ["xpath=//section/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e99d5274-2323-4028-a594-c6f42ed89639",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd071939-99c3-4a50-b5fa-f48deb2dc88c",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fa28c60-b530-453c-9fb7-c41e7b355950",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "8ed143d1-9759-4411-bfc1-3589f70b4754",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c24cb39c-46ad-4c01-8605-2089900402b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7a17eb3-5d95-4eca-b31e-4a6d4036ccbb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "8f0cf288-7ca9-43c2-87b9-b7dbf8f8656e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b001593-08be-4d85-ab2a-99db353cca41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38432c7a-9775-40a1-9763-5879f9788df3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "7779c71a-2c3b-4178-a61f-ddb5dffd7d53",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ddddd58-5d7b-4506-a409-b38a2b475dde",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b97345a-3480-4cda-9f78-8c51cd99846a",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "3350436c-017d-409f-95d6-8c7a120492ae",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[15]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f6b8557-48d5-4e8f-a8f0-de1ba6b7a8bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a365183-7291-44b6-974c-502843d8d0ea",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "4078b1a8-bf38-478e-a0c3-3559f0e3c70a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ecfc237-de28-4d5b-a293-54a2ab01aa53",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47875fbe-108c-4784-ad78-d09f63ddbc9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e5fc3e0-6258-4df6-877e-257d92fb1abb",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "0820876c-ee9a-4062-9f76-bd3fad3cd62c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a879ef2-1a8b-4ec7-84d1-99b7c7dc2f1d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18a75064-a044-4010-ba53-0c1fd9178656",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "93aed9df-ae12-4b89-9126-347e536ca4cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div", "xpath:idRelative"],
+        ["xpath=//article[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df8e1a4a-dd61-4771-a09c-ab1b4926db36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div", "xpath:idRelative"],
+        ["xpath=//article[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38e5cb80-5ab0-432f-8743-75d5cc778796",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div", "xpath:idRelative"],
+        ["xpath=//article[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b064b1a2-6324-4a85-9983-04e1e9136be0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a51a714-361e-486b-a6ff-c07517064c51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98aa2379-c760-4dc9-a4f2-2e45c81871e1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "9e361ced-5f61-4b5e-8342-5992be00e3e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div", "xpath:idRelative"],
+        ["xpath=//article[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b4e3aa2-9d49-46c0-a082-9b96f6f683be",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "834d367c-ecdc-47ae-bca8-896830cda1e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "848c0b6d-8c46-4276-8bd4-4935318f6f5d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "42cd1ece-1970-4aaa-b0f6-998f22d5348a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[15]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e38a013c-9fb6-480a-8801-884dbd70ea41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d6c1fee-66fc-418e-b174-e4e4649ac33c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "53198d9b-04df-4331-8ffb-fa64c03bb6b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button:nth-child(7)",
+      "targets": [
+        ["css=.kysimuste-plokk-button:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bcfa52e-0266-49bf-8e01-a68c0a69608c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.kysimuste-plokk-button:nth-child(7)",
+      "targets": [
+        ["css=.kysimuste-plokk-button:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2c33201-6209-487e-8e09-c419650320f9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a0b36b0-0fe9-4a8e-8e25-3537b7a57e65",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94ac5a9f-4ac6-4b6f-b0ad-c72f1c200939",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "e2293e46-01d8-425b-a397-9509b3721e68",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0e0f41f-0add-421b-a12c-54ba80f8a941",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a9168ec-608b-45ee-8769-d20b72026331",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "c85d12bb-115b-4aff-89fc-31efca4cdb57",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "378dde6a-c773-43d4-aacc-60786e6c9be3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a22e49a-6fb1-4ffb-b0b6-acd2985f9f42",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "30108a3c-a110-4d96-aa72-bf6ba8c7ed1e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e3cf603-a9b3-44c7-bef1-0eeedeca0962",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c64853b-edb7-4e95-b85b-dcb652dee7f1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "b6568a82-7ff0-4328-a1d2-883d8d8d2343",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[15]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8152816c-5e0a-41ea-bd00-d6d3677f10e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "224402c6-9ccc-48a7-9575-06541f02a6ab",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "af08a45c-f649-4555-90bc-62645d6fa7d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button:nth-child(7)",
+      "targets": [
+        ["css=.kysimuste-plokk-button:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89b6256b-1512-41a3-94ed-60db69456fa0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1700)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f9683dd-8400-4077-9cca-95d5b45f5f27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b71605ee-42db-4b1a-94bd-e094a65fd129",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dfd4bb6-29c0-44b8-a9c7-899882b2a951",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e190e9f-c0d3-4eec-8115-9d2ecd1c4ee3",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "fa997403-a1bc-4fff-a2d9-cbfb6eede21e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div", "xpath:idRelative"],
+        ["xpath=//article[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a8666a4-4695-4ea2-b53c-0a11a3ef6159",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d87ad5c4-27aa-4ba9-9c81-f97b4039d893",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df8af5c0-128f-4b7d-9729-c84bad11a0f8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d3ada2c5-3dcc-40d8-b470-5e117d275d6a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a45d07d-9353-4955-95ea-9e8af09896dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b05dd55a-81ca-4457-a8d8-147207a8d59f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2beb8dff-d28a-4c9b-859d-abd3a192bad5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef3d6270-a594-4341-a73f-54f13eb443a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "703dd487-bc2d-4dfd-8728-eee635a580d1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2d191e19-2ad6-448f-891b-683dcbe42a5a",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e1e89f0-e550-493f-b1bd-6db03f9c4de6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.next-block-button",
+      "targets": [
+        ["css=.next-block-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/button", "xpath:idRelative"],
+        ["xpath=//section/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6a62f71-aafe-4ebe-9f7e-8c89ba6aaefe",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus42", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c57de2f-bb9a-436a-be46-e1202adb1705",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d306123c-0399-427e-92b2-dacbe608fca7",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "8c21bc77-574d-4aac-902a-fe6245a01a14",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[5]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0540888d-c184-459b-b899-d9ccdc4b8692",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b150572-b67a-4d16-aa59-c1dbf66b48ad",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "fd9074a9-0a11-4e16-bdfa-ad90985f428b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58909f6c-5de0-40fe-a169-d7d73891e73f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80ad8021-3449-4fb7-9e3e-2a693092f8e6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "c8d11249-d6a0-4d85-8d86-bed0abbda2e7",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus45",
+      "targets": [
+        ["name=vastus45", "name"],
+        ["xpath=(//input[@id='vastus'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "999427fb-e846-4d53-b36f-3df38b083fd6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6260d44e-9c75-43fb-ba43-a17b5e216b17",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "71f31ed6-7ceb-4409-a892-c9bc61771a41",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[14]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[14]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58ef9901-f17e-4f51-87ae-1cc37437667f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e95e9461-a572-4209-9e82-60bbaefc79b5",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "940ced63-0825-435d-ba4a-dfb30863d5c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab7926f5-0fca-4f49-af98-954e7ed8a169",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f129682-c957-4627-a23a-a997b41bd644",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Eelmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d6bb263-4252-495e-939b-b1f8766ac9f7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1567)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c88520d1-f56a-41cc-a19c-a7206ea4bd7e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fe96d13-db59-4718-9452-14c80925dec8",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fd8948f-0ca9-4ca9-a4c2-06c1099930b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "b81b2732-2104-4eae-a5d7-cc53fe9815c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div", "xpath:idRelative"],
+        ["xpath=//article[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb144920-f9c6-4bed-b53b-1c3d40d52af9",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus48",
+      "targets": [
+        ["name=vastus48", "name"],
+        ["xpath=(//input[@id='vastus'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9fb10f0-71f6-4675-a6a9-4e98d77d91c4",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus48",
+      "targets": [
+        ["name=vastus48", "name"],
+        ["xpath=(//input[@id='vastus'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee110321-5ca3-41c3-af7c-300ef8a1e66b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0da73de9-f75a-418d-a0a3-04ea65053a6f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "b082b73b-efef-47be-8e20-3b1cdc01b8c2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[8]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d411f223-eebb-4d1f-975f-b60fcd7d1412",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc9688aa-cc90-4cd5-8f02-b3b380f09085",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "48a0bac8-baee-4e7e-ba99-afca672a7f62",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div", "xpath:idRelative"],
+        ["xpath=//article[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc685ee4-b28c-4384-ae7a-508128360a05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div", "xpath:idRelative"],
+        ["xpath=//article[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "438f4fbf-5211-4a7e-bb09-fae72b5be60c",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "266caed6-9b3f-4afc-ab07-648d7c6d2f98",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div", "xpath:idRelative"],
+        ["xpath=//article[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29f26616-b999-424d-865b-9d103e480b1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div", "xpath:idRelative"],
+        ["xpath=//article[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60b4ae9a-eee7-4b4c-9d45-95c41eb70a37",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8be05726-a9bd-431b-952a-7683384626a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ea3093a-219f-4fd7-9d6f-989bcd478eeb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "0587bb1d-68c3-48e0-9e0a-2d3e5a05a9fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce656421-ba8c-47cd-9c6a-7b9216f8ac91",
+      "comment": "",
+      "command": "click",
+      "target": "css=.next-block-button",
+      "targets": [
+        ["css=.next-block-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/button", "xpath:idRelative"],
+        ["xpath=//section/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d754b092-14b4-42b2-88cd-d83e556a8777",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e77a1731-8d33-4c3e-835e-fe780d42f367",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fceac461-4d53-4b55-865f-bc888a7b17e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "e467cf98-48a8-45a2-8fe3-dfdc04771b23",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[5]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "039e5908-4f25-43db-ab52-f03c5edd0c1a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "274ce7c6-bd2f-47b3-9253-e773f716a94b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "76ecbc3a-ef2e-461c-ac17-906c64f837a1",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus53",
+      "targets": [
+        ["name=vastus53", "name"],
+        ["xpath=(//input[@id='vastus'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "132f3dbd-df86-456a-b097-ee1d581d0a6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "beaf0867-9327-4ed1-b981-a5569e40ae09",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "1233"
+    }, {
+      "id": "138d844d-0ea8-4efa-9aec-b8f440facd2c",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus54",
+      "targets": [
+        ["name=vastus54", "name"],
+        ["xpath=(//input[@id='vastus'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c182cbb5-f346-4fd8-9d88-5e186b87bb3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7594101c-d44b-4a02-b406-7ecdf65c9562",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2740e36a-d595-4ac4-9ca1-31047d6f05f8",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus55",
+      "targets": [
+        ["name=vastus55", "name"],
+        ["xpath=(//input[@id='vastus'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e5442bc-fd06-4c3e-bb82-7c169525272b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f69d7a3-c67a-4832-ae8a-9be535c4dd2d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "d41022c5-adab-49b6-a710-7fc801e3ef40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "087a7109-5cfc-477d-ad5d-33497600e431",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77636d65-d6be-4bb7-a563-34c0fa02ec16",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Eelmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac9d0c48-0023-4cd3-b8db-1a705d3cb6fb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,772)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afeea6c0-9b5c-47bb-90a0-5fd6297b901a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "162f4468-238e-40b2-840f-9d3f0639498c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d01eff8-445c-4b84-a383-35cf961a77ac",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[2]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16813791-a22f-459b-8b5d-84358ca6876b",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a1ae597-3301-4e6a-807b-0b88dc86cb04",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2279f98f-468f-49b1-95d1-9be984a090db",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "beafba17-3640-404a-988d-6da479756ef7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d3a7cab-0f9e-42d3-b542-bbff28ba74a3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "a1ec60b5-e569-4dd8-95e0-2e9451dcf24b",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d978f62-90f7-48ee-8ea6-47cfb9438c1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.next-block-button",
+      "targets": [
+        ["css=.next-block-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/button", "xpath:idRelative"],
+        ["xpath=//section/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ffa947f-5e9c-4b0a-b036-858698c34155",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus58", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eac47fcc-9f90-4956-8d06-1e9f114fb1fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f46d40d5-30c4-41ff-b652-f28e89d5aa73",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "9a02b477-e254-4318-97b9-c8582e709bc5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "caf6afa1-1ddc-4efa-a8d0-d7464d9e13de",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54bd2efe-6c25-4d1c-8ccb-382d8957d937",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "7712fe50-422c-4544-a355-00fe6fd4f34f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1f32da2-3fd3-4f3d-b36b-0c920f029fe8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4872294-5d56-4f0f-a690-83357a1befae",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "1d9aec56-92ea-49ee-8261-1c7f7b4b7b08",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[12]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab499c3e-6d34-4372-ace7-4f98d1bc26e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43434526-4662-43bb-b7b4-f55d05f37c81",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "778cf408-7c88-46a5-9193-2e5f53351ff4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div", "xpath:idRelative"],
+        ["xpath=//article[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3f9b232-3390-45c9-a62d-ebba6f22826d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div", "xpath:idRelative"],
+        ["xpath=//article[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d6b0bb5-dd42-4cef-bcda-9d9aca009631",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[15]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b62ec400-c9b2-4a7d-8943-f7aaf007dd40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b84a326-f9f7-4560-b907-2223ef179955",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "213"
+    }, {
+      "id": "134fe269-54b9-4513-9759-36cbb7842dfd",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2d5c81a-4486-4714-9982-ca4ad7b2a243",
+      "comment": "",
+      "command": "click",
+      "target": "id=end-button",
+      "targets": [
+        ["id=end-button", "id"],
+        ["css=#end-button", "css:finder"],
+        ["xpath=//button[@id='end-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/button", "xpath:idRelative"],
+        ["xpath=//section/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Lõpeta küsimustik')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bdb4add7-83e2-4647-b3e3-9be894af7d5b",
+    "name": "KysimustikuPlokk",
+    "commands": [{
+      "id": "ac0bbe2b-e430-4238-b8ec-6abd8df31671",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/kysimustikud",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7e9fdd1-e927-4ecd-920e-e5d209074a64",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1484x1013",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a623f72-cdd7-4360-8fa9-846df045c22e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimustik-button",
+      "targets": [
+        ["css=.kysimustik-button", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/article/button", "xpath:idRelative"],
+        ["xpath=//article/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Täida')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05cc58b0-0363-4cdd-9351-18f9a5972e6c",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus1", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e41669d0-641e-4699-9bbd-8e6bda19da12",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8615800b-a13d-4936-bc7d-c22f1bd3c3de",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "af6041c8-27e6-45ee-9458-63f5e9f4002a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[5]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33fd2bb5-05fc-49ad-b753-939027066fcd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "badb7823-72fb-4b6f-ace2-6877b5705895",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "5cdc721b-4ebe-493e-b86b-d6465686960c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "186a50b7-1ea6-469e-9e38-442e6f5a5194",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a2f33a8-25ab-48e3-91bc-de17b55208cf",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "c915912d-b957-481a-88e5-db18f90bdf28",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[11]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed4850fa-b5c6-4f12-9a2f-c846613ad9a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5af98354-d687-4c3b-a594-cd33666ee0ff",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "bf2e6ab3-f90d-4dc0-bb47-5a44e77d2971",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus5",
+      "targets": [
+        ["name=vastus5", "name"],
+        ["xpath=(//input[@id='vastus'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "001fe6bd-6941-4dbc-87ec-5d5e1d7b0146",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "931b43e1-400f-4c84-9de1-10b6c6bb3da1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "5baf7a77-c0f3-43d3-a3bb-0a83aa112274",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fec2d203-84d2-4d8c-be09-32088aa00d4d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.kysimuste-plokk-button",
+      "targets": [
+        ["css=.kysimuste-plokk-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84dcb1d8-f290-4875-be1c-6acfae63c4ed",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2257)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9663d95-3775-42e6-861b-a385adf92933",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(1) > .vastuse-valik-container", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e74df108-62ab-4c82-9603-4ce6c5e1929c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[3]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b277b65-657e-4a39-bb6e-b0b5b1534687",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03ad3076-0580-42e7-9eb4-44a8f8ce2e22",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "7761324b-7d10-4aca-8b7f-3e6f8690b57a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[6]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "986a6f4a-337e-4af2-ac63-675ff62685fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "182e2ecd-e97e-44a2-9920-642fe4dda7ca",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "ccf6012e-7506-4def-9626-0a26cb308f56",
+      "comment": "",
+      "command": "click",
+      "target": "name=vastus8",
+      "targets": [
+        ["name=vastus8", "name"],
+        ["xpath=(//input[@id='vastus'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "052c0685-8c46-4d4a-8a25-d2c6c7edfcaf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e06a784b-fc51-426e-88ee-be375dc3fcdd",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "c104557b-1b34-4fa2-b840-83be00071b59",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[11]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[4]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a773268a-67f8-4f5b-84d4-cb60c96b3a4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1cc4ff37-4548-4acf-ba0a-60a5bfd31498",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(4) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(4) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[4]/textarea", "xpath:idRelative"],
+        ["xpath=//article[4]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "35aa101a-3ebb-46f5-9aeb-6b2f081b4333",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[15]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[5]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c24c2b3c-81bc-44e0-adaf-609f832eaaf3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8613151a-9f4e-4be5-8e7f-08844c8b44ca",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(5) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(5) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[5]/textarea", "xpath:idRelative"],
+        ["xpath=//article[5]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "07c4091d-e501-4c84-b00f-d4fa98adb5ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimuste-plokk-button:nth-child(7)",
+      "targets": [
+        ["css=.kysimuste-plokk-button:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Jargmine alamplokk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "139941a1-ce47-4960-9e38-ab36de0adb10",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1412)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a03e06a3-519c-4336-b06e-40fd2a37680b",
+      "comment": "",
+      "command": "click",
+      "target": "id=vastus",
+      "targets": [
+        ["id=vastus", "id"],
+        ["name=vastus11", "name"],
+        ["xpath=//input[@id='vastus']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b5dbb4a-7dd6-4c2f-8201-d4b1b4e83e37",
+      "comment": "",
+      "command": "click",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8f99ee0-9bd0-4908-b1ee-9dbb437b0658",
+      "comment": "",
+      "command": "type",
+      "target": "id=enesehinnangText",
+      "targets": [
+        ["id=enesehinnangText", "id"],
+        ["css=.kysimus-plokk:nth-child(1) > #enesehinnangText", "css:finder"],
+        ["xpath=//textarea[@id='enesehinnangText']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "6762412f-548c-4900-8106-486c5bcc4da3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[5]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//article[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a112fc7-9cdf-4163-a694-e2b7694d5131",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6db4c07-6cce-4380-b120-58811cd5e118",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(2) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(2) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[2]/textarea", "xpath:idRelative"],
+        ["xpath=//article[2]/textarea", "xpath:position"]
+      ],
+      "value": "13"
+    }, {
+      "id": "b00b29dc-01a7-4779-8e32-515e3fe85226",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@id='vastus'])[9]",
+      "targets": [
+        ["xpath=(//input[@id='vastus'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/div/input[3]", "xpath:idRelative"],
+        ["xpath=//article[3]/div/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4ed7fb1-8d83-4060-aee3-63cf139a7089",
+      "comment": "",
+      "command": "click",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b86f4c3-32fe-4f43-a75b-87a08c270b79",
+      "comment": "",
+      "command": "type",
+      "target": "css=.kysimus-plokk:nth-child(3) > #enesehinnangText",
+      "targets": [
+        ["css=.kysimus-plokk:nth-child(3) > #enesehinnangText", "css:finder"],
+        ["xpath=(//textarea[@id='enesehinnangText'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/article[3]/textarea", "xpath:idRelative"],
+        ["xpath=//article[3]/textarea", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "cc0f0554-080d-4938-80a9-d07e94195764",
+      "comment": "",
+      "command": "click",
+      "target": "id=next-page-button",
+      "targets": [
+        ["id=next-page-button", "id"],
+        ["css=#next-page-button", "css:finder"],
+        ["xpath=//button[@id='next-page-button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/section/section[2]/section/form/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Järgmine leht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "896f8a51-a7a9-4c62-aee9-a270770ec92e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5016979e-12c2-4fb4-b99d-656ede90f08b"]
+  }],
+  "urls": ["http://localhost:3000/", "http://localhost:3000/kysimustikud"],
+  "plugins": []
+}
